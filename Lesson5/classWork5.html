@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+     <style type="text/css">
+
+    </style>
+    <title>Hello, world!!!</title>
+  </head>
+  <body>
+      <div id="myId" class="myClass">Test</div>
+      <button id="myButton">Кнопка</button>
+      <div id="timer"></div>
+      <script type="text/javascript">
+          /*//document.write('Привет мир!!!');
+          //alert('Hello world!!!');
+          //console.log('text');
+
+          var a;
+          a = 5; 
+          a = 5.5;//Числовой тип
+          var b = 'test';//Строковый типa
+          var c = true; //Логический тип
+          var d;
+          console.log(typeof(d));
+          //Объект
+          var g = {
+              name: 'vasya',
+              tel: 541582
+          }
+          console.log(g);
+          console.log(g.name);
+          var r = parseInt('18'); //Преобразование в INT
+          console.log(typeof(r));
+          var t = 15;
+          var z = t.toString(); //Преобразование в String
+          console.log(typeof(z));
+
+          if(){
+              console.log('if');
+          }else{
+              console.log('else');
+          }
+          //0 '' false null undefined Nan
+          //Все остальные true
+          */
+
+          //Получение элемента по Id
+          /*var myId = document.getElementById('myId');
+          console.log(myId);
+          //Получение элемента по Классу
+          var myClass = document.getElementsByClassName('myClass');
+          console.log(myClass);
+          //Получение элемента по тегу
+          var myTag = document.getElementsByTagName('div');
+          //Получение элемента по селектору
+          document.querySelector('.myClass div');
+          document.querySelectorAll('.myClass div'); //вернет все элементы
+
+          //События
+          
+          var myButton = document.getElementById('myButton');
+          myButton.onclick = function() {
+              console.log('click');
+              setTimeout(function(){
+                  console.log('tick');
+              }, 1000);
+
+
+
+
+          }*/
+          var myButton = document.getElementById('myButton');
+          var time = 0;
+          var timer = document.getElementById('timer');
+          console.log('timer');
+          console.log('timer.text');
+          timer.innerHTML = time;
+          var id = setInterval(function() {
+              time = time + 1;
+              timer.innerHTML = time;
+              console.log('interval');
+              }, 1000);
+          myButton.onclick = function() {
+              clearInterval(id);
+            }
+              
+      </script>
+
+  </body>
+</html>
